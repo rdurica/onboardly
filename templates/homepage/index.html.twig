@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <div class="banner">
+
+    </div>
+    <div class="container">
+        <h1>Vstupní dotazník</h1>
+        <p style="text-align: center; color: #666; font-size: 14px; margin-bottom: 30px;">
+            Prosím, vyplňte tento formulář pečlivě a pravdivě, abychom vám mohli co nejlépe pomoci a usnadnili váš nástup.
+        </p>
+        <form>
+            <label style="margin-top: 20px; margin-bottom: 15px;"><strong>Základní údaje</strong></label>
+
+            <label for="firstName">Jméno <span style="color: red;">*</span></label>
+            <input type="text" id="firstName" name="firstName" placeholder="Zadejte své křestní jméno" required>
+
+            <label for="lastName">Příjmení<span style="color: red;">*</span></label>
+            <input type="text" id="lastName" name="lastName" placeholder="Zadejte své příjmení" required>
+
+            <label style="margin-top: 20px; margin-bottom: 15px;"><strong>Adresa trvalého bydlište</strong></label>
+            <div class="form-row">
+                <div>
+                    <label for="street">Ulice<span style="color: red;">*</span></label>
+                    <input type="text" id="street" name="street" placeholder="Zadejte název ulice" required>
+                </div>
+                <div>
+                    <label for="city">Město/Obec<span style="color: red;">*</span></label>
+                    <input type="text" id="city" name="city" placeholder="Město/Obec">
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="state">Kraj/Okres<span style="color: red;">*</span></label>
+                    <input type="text" id="state" name="state" placeholder="Kraj/Okres" required>
+                </div>
+                <div>
+                    <label for="zip">PSČ<span style="color: red;">*</span></label>
+                    <input type="text" id="zip" name="zip" placeholder="PSČ" required>
+                </div>
+            </div>
+            <label for="country">Země<span style="color: red;">*</span></label>
+            <input type="text" id="country" name="country" placeholder="Země" required>
+
+
+            <label style="font-style: italic;">*Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aliquid, assumenda consequatur, consequuntur debitis ea, et excepturi in incidunt ipsum iste neque nulla optio quas quia quidem sequi ullam?</label>
+            <button type="submit" style="margin-top: 20px;">Odeslat</button>
+        </form>
+    </div>
+    <div class="footer">
+        &copy; 2024 All rights reserved.
+    </div>
+
+{% endblock %}
+
+
