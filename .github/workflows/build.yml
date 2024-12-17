@@ -25,7 +25,7 @@ jobs:
             compose.yaml
             compose.override.yaml
           set: |
-            *.tags=rdurica/onboardly:$(echo ${{ github.ref }} | sed 's/refs\/tags\///')
+            *.tags=rdurica/onboardly:${{ github.ref_name }}
             *.tags=rdurica/onboardly:latest
             *.cache-from=type=gha,scope=refs/heads/main
             *.cache-to=type=gha,scope=${{ github.ref }},mode=max
